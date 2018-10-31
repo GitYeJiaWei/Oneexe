@@ -50,12 +50,20 @@ public class Group {
     }
 
     public static String chartostring(String verificationCode){
+       /* for (int j =0;j<verificationCode.length();j++){
+            char chars = verificationCode.charAt(j);
+        }*/
+
+       //需求：把一个字符串的首字母转成大写，其余为小写。(只考虑英文大小写字母字符),concat连接字符串
+        String s = "woaiHEImaniaima";
+        String s2 = s.substring(0, 1).toUpperCase().concat(s.substring(1).toLowerCase());
+        System.out.println(s2);
+
         //把字符串string 转换成为 字符串数组char[]
         char[] chars1 =verificationCode.toCharArray();
         for (int i =0;i<chars1.length;i++){
             chars1[i] = isUpperCase(chars1[i]);
         }
-
         //再把chars1[]转换成string
         verificationCode = new String(chars1);
 
