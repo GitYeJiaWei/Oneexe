@@ -15,12 +15,12 @@ package com.view;
 public class Substring {
     public static void main(String[] args){
         //demo1();
-        //demo2();
+        demo2();
         //demo3();
         //demo4();
         String s = "woaiheima";
-        s.substring(4);									//subString会产生一个新额字符串,需要将新的字符串记录
-        System.out.println(s);
+        String t = s.substring(4);									//subString会产生一个新额字符串,需要将新的字符串记录
+        System.out.println("截取前"+s+"截取后"+t);
 
     }
 
