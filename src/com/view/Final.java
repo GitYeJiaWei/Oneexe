@@ -9,7 +9,7 @@ public class Final {
        son.print();
        son.sisi();
 
-       Father father = new Son();
+       Father father = new Son();        //父类引用指向子类对象,调用的是子类重写的方法
        father.print();
        father.sisi();
 
