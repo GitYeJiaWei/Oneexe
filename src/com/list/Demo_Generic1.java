@@ -12,9 +12,9 @@ import java.util.Iterator;
  * <>中放的必须是引用数据类型
  * D:泛型使用注意事项
  * 前后的泛型必须一致,或者后面的泛型可以省略不写(1.7的新特性菱形泛型)
-
+ * 非泛型类
  */
-public class Generic {
+public class Demo_Generic1 {
     public static void main(String[] args){
         demo1();
         demo2();
