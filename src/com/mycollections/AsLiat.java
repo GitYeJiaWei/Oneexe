@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 import java.util.*;
 
@@ -30,8 +30,8 @@ public class AsLiat {
 
     public static void demo2() {
         //int[] arr = {11,22,33,44,55};
-        //List<int[]> list = Arrays.asList(arr);			基本数据类型的数组转换成集合,会将整个数组当作一个对象转换
-        //System.out.println(list);
+        //List<int[]> mycollections = Arrays.asList(arr);			基本数据类型的数组转换成集合,会将整个数组当作一个对象转换
+        //System.out.println(mycollections);
         Integer[] arr = {11,22,33,44,55};					//将数组转换成集合,数组必须是引用数据类型
         List<Integer> list = Arrays.asList(arr);
         System.out.println(list);
@@ -92,10 +92,10 @@ public class AsLiat {
         list.addFirst("d");
         list.addLast("e");
 
-        //System.out.println(list.getFirst());
-        //System.out.println(list.getLast());
-        //System.out.println(list.removeFirst());
-        //System.out.println(list.removeLast());
+        //System.out.println(mycollections.getFirst());
+        //System.out.println(mycollections.getLast());
+        //System.out.println(mycollections.removeFirst());
+        //System.out.println(mycollections.removeLast());
 
         System.out.println(list.get(1));
         System.out.println(list);          /*dcbae*/

@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 import java.util.List;
 //使用Class<T>传递泛型类Class对象

@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 //泛型类
 public class Demo_Generic2 {

@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 //定义泛型数组
 public class Demo_Generic5 {

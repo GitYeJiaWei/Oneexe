@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 
 public class Demo_Array {

@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 
 //泛型函数定义及使用
 public class Demo_Generic3 {

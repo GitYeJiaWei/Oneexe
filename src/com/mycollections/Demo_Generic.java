@@ -1,4 +1,4 @@
-package com.list;
+package com.mycollections;
 /**
  * * A:泛型接口概述
  * 把泛型定义在接口上

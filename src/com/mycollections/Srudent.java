@@ -1,7 +1,5 @@
-package com.list;
+package com.mycollections;
 
-
-import com.view.Equals;
 
 public class Srudent {
     private int age;
@@ -48,6 +46,7 @@ public class Srudent {
         return true;							//返回true
     }
 
+    //System.out.println(xx)，括号里面的“xx”如果不是String类型的话，就自动调用xx的toString()方法
     @Override
     public String toString() {
         return "name:"+this.name+" age:"+this.age;
