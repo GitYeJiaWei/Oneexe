@@ -24,7 +24,7 @@ import java.io.IOException;
 
  运行时异常:就是程序员所犯得错误,需要回来修改代码
  */
-public class WrongFileTest1 {
+public class FileTest1 {
     public static void main(String[] args){
         //demo1();
         //demo2();

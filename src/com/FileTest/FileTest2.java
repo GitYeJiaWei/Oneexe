@@ -41,7 +41,7 @@ import java.io.IOException;
  * 		* public String[] list():获取指定目录下的所有文件或者文件夹的名称数组
  * 		* public File[] listFiles():获取指定目录下的所有文件或者文件夹的File数组
  */
-public class WrongFileTest2 {
+public class FileTest2 {
     public static void main(String[] args){
         //demo1();
         demo2();

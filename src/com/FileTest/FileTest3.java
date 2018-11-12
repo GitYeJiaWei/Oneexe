@@ -2,7 +2,7 @@ package com.FileTest;
 
 import java.io.File;
 
-public class WrongFileTest3 {
+public class FileTest3 {
     public static void main(String[] args){
         demo1();
     }

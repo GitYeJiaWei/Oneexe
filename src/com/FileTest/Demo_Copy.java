@@ -2,6 +2,13 @@ package com.FileTest;
 
 import java.io.*;
 
+/**
+ * FileInputStream ：以字节流方式读取；
+ *FileOutputStream
+ *
+ * FileReader ：把文件转换为字符流读入；
+ * FileWriter
+ */
 public class Demo_Copy {
     public static void main(String[] args){
         //demo1();
@@ -9,7 +16,10 @@ public class Demo_Copy {
         //demo3();
         //demo4();
         //demo5();
-        demo6();
+        //demo6();
+        //demo7();
+        //demo8();
+        demo9();
     }
 
     public static void demo1(){
@@ -135,14 +145,15 @@ public class Demo_Copy {
      * 字节流写出中文的问题
      * 字节流直接操作的字节,所以写出中文必须将字符串转换成字节数组
      * 写出回车换行 write("\r\n".getBytes());
+     * 出现乱码现象要把编译类型改为“UTF-8"
      */
     public static void demo6(){
         try {
-            FileInputStream fis = new FileInputStream("必看.txt");
-            byte[] arr = new byte[4];
+            FileInputStream fis = new FileInputStream("zzz.txt");
+            byte[] arr = new byte[1024];
             int len;
             while((len = fis.read(arr)) != -1) {
-                System.out.println(new String(arr,0,len));
+                System.out.println(new String(arr,0,len,"utf-8"));
             }
             fis.close();
 
@@ -156,5 +167,67 @@ public class Demo_Copy {
             e.printStackTrace();
         }
 
+    }
+
+    public static void demo7(){
+        try {
+            FileReader fr = new FileReader("zzz.txt");
+            FileWriter fw = new FileWriter("yyy.txt");
+            BufferedReader bufferedReader = new BufferedReader(fr);
+            BufferedWriter bufferedWriter = new BufferedWriter(fw);
+
+            int b=0;
+            while ((b=bufferedReader.read())!=-1){
+                bufferedWriter.write(b);
+            }
+            bufferedWriter.close();
+            bufferedReader.close();        //Writer类中有一个2k的小缓冲区,如果不关流,就会将内容写到缓冲区里,关流会将缓冲区内容刷新,再关闭
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void demo8(){
+        try {
+            FileReader fr = new FileReader("ttt.txt");
+            FileWriter fw = new FileWriter("yyy.txt");
+
+            char[] chars = new char[1024];
+            int b;
+            while ((b=fr.read(chars))!=-1){         //将文件上的数据读取到字符数组中
+                fw.write(chars,0,b);           //将字符数组中的数据写到文件上
+            }
+            fw.close();
+            fr.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void demo9(){
+        try {
+            //字符流不能拷贝纯文本的文件
+            FileReader fr = new FileReader("p8_2.png");
+            FileWriter fw = new FileWriter("copy.png");
+
+            int c;
+            while((c = fr.read()) != -1) {
+                fw.write(c);
+            }
+
+            fr.close();
+            fw.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
