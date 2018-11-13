@@ -19,6 +19,8 @@ public class Digui {
      *
      * 递归调用是否必须有返回值?
      * 不一定(可以有,也可以没有)
+     *
+     * 栈的内存要远远小于堆内存，如果你使用递归的话，那么你的栈很快就会充满。如果递归没有及时跳出，很可能发生StackOverFlowError问题
      */
     public static void main(String[] args) {
 		/*int result = 1;
