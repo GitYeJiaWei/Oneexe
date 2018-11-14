@@ -14,7 +14,7 @@ public class Demo08_RandomAccessFile {
         //int x = raf.read();
         //System.out.println(x);
         raf.seek(0);					//在指定位置设置指针
-        raf.write(98);
+        raf.write(97);                  //在0位置写入a，97在码表上的值对应为a
         raf.close();
     }
 }
