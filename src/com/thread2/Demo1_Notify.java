@@ -51,6 +51,7 @@ class Printer{
             System.out.print("\r\n");
             flag = 2;
             this.notify();						//随机唤醒单个等待的线程
+            //this.notifyAll();                  //唤醒所有等待线程
         }
     }
 
