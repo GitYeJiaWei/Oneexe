@@ -6,7 +6,7 @@ package com.view;
  * int indexOf(String str):返回指定字符串在此字符串中第一次出现处的索引。
  * int indexOf(int ch,int fromIndex):返回指定字符在此字符串中从指定位置后第一次出现处的索引。
  * int indexOf(String str,int fromIndex):返回指定字符串在此字符串中从指定位置后第一次出现处的索引。
- * lastIndexOf
+ * lastIndexOf;从后向前找,返回第一次出现的字符的索引
  * String substring(int start):从指定位置开始截取字符串,默认到末尾。
  * String substring(int start,int end):从指定位置开始到指定位置结束截取字符串。
  * concat把字符串拼接
@@ -19,7 +19,7 @@ public class Substring {
         //demo3();
         //demo4();
         String s = "woaiheima";
-        String t = s.substring(4);									//subString会产生一个新额字符串,需要将新的字符串记录
+        String t = s.substring(4);									//subString会产生一个新的字符串,需要将新的字符串记录
         System.out.println("截取前"+s+"截取后"+t);
 
     }
@@ -29,7 +29,7 @@ public class Substring {
         String s2 = s1.substring(5);
         System.out.println(s2);
 
-        String s3 = s1.substring(0, 5);					//包含头,不包含尾,左闭右开
+        String s3 = s1.substring(0, 5);					//包含头,不包含尾,左闭右开，索引从0开始
         System.out.println(s3);
     }
 
