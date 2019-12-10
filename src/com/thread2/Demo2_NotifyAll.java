@@ -95,7 +95,7 @@ class Printer2 {
 
     public void print3() throws InterruptedException {
         synchronized(this) {
-            while(flag != 3) {
+            while (flag != 3) {
                 this.wait();						//线程3在此等待,if语句是在哪里等待,就在哪里起来
                 //while循环是循环判断,每次都会判断标记
             }
